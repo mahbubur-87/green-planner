@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'green-planner'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_78AC4CCAEEED4C2EA5CE6D600BCDDDDD }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_0380EFCB039F474DA3FC04AC285C17C2 }}
