@@ -3,7 +3,11 @@ from .models import Customer
  
 class CustomerSerializer(serializers.ModelSerializer):
 
+    #class Meta:
+    #    model = Customer 
+    #    fields = ['pk', 'name', 'email', 'created']
+
     class Meta:
-        model = Customer 
-        fields = ['pk', 'name', 'email', 'created']
+        model = Customer
+        fields = ('__all__')
 
