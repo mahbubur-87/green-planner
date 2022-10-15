@@ -39,8 +39,8 @@ class PackageSerializer(serializers.ModelSerializer):
     location_from = serializers.CharField(max_length=200)
     location_to = serializers.CharField(max_length=200)
     package_rank = serializers.IntegerField(required=False, default=1)
-    route = RouteSerializer(read_only=True)
-    stay = StaySerializer(read_only=True)
+    route = RouteSerializer()
+    stay = StaySerializer()
 
     class Meta:
         model = Package
