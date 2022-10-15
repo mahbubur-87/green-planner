@@ -39,8 +39,8 @@ class PackageSerializer(serializers.ModelSerializer):
     location_from = serializers.CharField(max_length=200)
     location_to = serializers.CharField(max_length=200)
     package_rank = serializers.IntegerField(required=False, default=1)
-    route = serializers.IntegerField(required=True)
-    stay = serializers.IntegerField(required=True)
+    #route = serializers.IntegerField(required=True)
+    #stay = serializers.IntegerField(required=True)
     green_route = RouteSerializer(read_only=True)
     green_stay = StaySerializer(read_only=True)
 
