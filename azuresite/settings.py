@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'customer',
     'shopping_cart',
+    'green',
 ]
 
 MIDDLEWARE = [
