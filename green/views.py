@@ -91,6 +91,16 @@ class PackageViews(APIView):
         items = Package.objects.all()
         serializer = PackageSerializer(items, many=True)
         return Response({"status": "success", "data": serializer.data}, status=status.HTTP_200_OK)
+
+    def get(self, request, location_from=None, location_to=None):
+        if location_from and location_to:
+            item = Package.objects.filter(location_from=location_from).filter(location_to=location_to)
+            serializer = PackageSerializer(item)
+            return Response({"status": "success", "data": serializer.data}, status=status.HTTP_200_OK)
+
+        items = Package.objects.all()
+        serializer = PackageSerializer(items, many=True)
+        return Response({"status": "success", "data": serializer.data}, status=status.HTTP_200_OK)    
         
     def patch(self, request, id=None):
         item = Package.objects.get(id=id)
