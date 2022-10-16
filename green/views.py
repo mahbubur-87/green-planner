@@ -94,7 +94,7 @@ class PackageViews(APIView):
 
     def get(self, request, location_from=None, location_to=None):
         if location_from and location_to:
-            items = Package.objects.filter(location_from=location_from).filter(location_to=location_to)
+            items = Package.objects.filter(location_from=location_from).filter(location_to=location_to).order_by('package_rank')
         else:
             items = Package.objects.all()
             
